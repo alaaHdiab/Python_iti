@@ -1,0 +1,34 @@
+class Parent1():
+    def __init__(self):
+        super(Parent1, self).__init__()
+        print("Parent1")
+    def welcome(self):
+        print("hello parent1")
+
+class Parent2():
+    def __init__(self):
+        super(Parent2, self).__init__()
+        print("Parent2")
+    def welcome(self):
+        print("welcome Parent2")
+
+class Child(Parent1, Parent2):
+    def __init__(self):
+        super(Child, self).__init__()
+        print("I'm a Child")
+
+ch = Child()
+ch.welcome()
+
+
+super() function executes the first one it meets from left to right
+as in Third(First,Second), it executed constructor of First only(in
+case other classes do not have super function.
+
+super() function in multiple inheritance executes from right to left 
+as in Third(First, Second), it executes constructor of second then 
+first then third. (in case other classes have super too)
+
+in case of methods with the same name in parent classes as above:
+it executes the first one it meets as in Third(First,Second),it 
+executed the speak() function in First.

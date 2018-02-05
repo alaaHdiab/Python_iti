@@ -1,0 +1,13 @@
+python doesn't have Overloading because it's loosely type 
+
+if you declare a function with different data type for example int , float , string
+it will be the same syntax
+ex:
+
+   def example(var):
+       pass
+
+
+var can be any type 
+
+
